@@ -1,25 +1,29 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-This repository currently stores product and game-design artifacts rather than application code. The active source material lives in `01- design/`, including [`requirements.md`](E:/new-game/01-%20design/requirements.md), [`design.md`](E:/new-game/01-%20design/design.md), and the one-page GDD. The remaining top-level folders (`02 - content/` through `06 - references/`, plus `99 - scratch/`) are reserved for future content, balancing notes, playtest data, decisions, references, and temporary working files. Keep durable project documents in numbered folders and avoid leaving final material in `99 - scratch/`.
+This repository is a git-tracked planning workspace for Project Go-Royale MVP. It is used for brainstorming, product/design documentation, and task management only; application code is implemented elsewhere. The main working set lives under `01 - design/`, with product intent in `requirements.md`, MVP scope in `requirements-mvp.md`, legacy broader context in `design.md`, and feature/system breakdowns in `01 - design/systems/`. Planning artifacts live in `01 - design/plans/`. The remaining top-level folders (`02 - content/` through `06 - references/`, plus `99 - scratch/`) are workflow buckets for later assets, balancing notes, playtest findings, decisions, references, and temporary work. Keep durable material in the numbered folders and clear final content out of `99 - scratch/`.
 
 ## Build, Test, and Development Commands
-No build, test, or runtime toolchain is committed yet. Current work is document editing and review.
+No application build or automated test toolchain is committed here; current development is planning, brainstorming, documentation, and backlog management.
 
-- `Get-ChildItem -Force` lists the repository layout.
-- `rg --files` inventories tracked working files quickly.
-- `Get-Content '01- design\\requirements.md'` reviews the requirements source before editing related docs.
+- `Get-ChildItem -Force` checks the repository layout and confirms git metadata.
+- `rg --files` inventories design files quickly.
+- `Get-Content '01 - design\requirements-mvp.md'` reviews the current MVP source of truth before updating related docs.
+- `git status --short` checks in-flight document changes.
+- `git log --oneline -5` shows the recent commit style used in this repo.
 
-If code is added later, update this section with the exact local build and test commands instead of placeholders.
+If code or tooling is added later, replace this section with the exact local commands instead of placeholders.
 
 ## Coding Style & Naming Conventions
-Use Markdown for repository documents. Prefer short sections, explicit headings, and requirement-style language for normative specs. Follow the existing folder naming pattern with numeric prefixes such as `01- design/` and `05 - decisions/` so materials stay ordered by workflow stage. Name new documents by purpose, for example `combat-resolution.md` or `2026-04-25-playtest-notes.md`.
+Use Markdown for all repo documents. Prefer short sections, explicit headings, and normative wording such as `SHALL`, `SHOULD`, and clearly labeled scope boundaries when describing systems. Keep filenames purpose-driven and readable, following existing patterns like `feature-room-multiplayer.md` and `mvp-system-overview.md`. Preserve the numbered folder prefixes so documents stay ordered by workflow stage.
 
 ## Testing Guidelines
-There is no automated test suite yet. For document changes, verify consistency across `requirements.md`, `design.md`, and related reference files. When adding rules or systems, check terminology, numeric values, and acceptance criteria against the existing design docs. If code is introduced, add a matching test directory and document the command used to run it here.
+There is no automated test suite yet. For document edits, verify consistency across `requirements-mvp.md`, related system docs in `01 - design/systems/`, and any plan files affected by the change. Check terminology, map size, player count, unit roster, and scope boundaries carefully so newer MVP docs do not drift back toward older pre-MVP design assumptions.
 
 ## Commit & Pull Request Guidelines
-Git history is not available in this workspace, so no commit convention can be inferred from the repository itself. Use concise, imperative commit messages such as `docs: refine shrink zone rules` or `design: align AP budget wording`. Pull requests should summarize the change, list affected files, call out any design decisions or unresolved questions, and include screenshots only when visual assets or layouts change.
+This repository has git history, and recent commits use short imperative subjects such as `feat: Add MVP system design` and `init spec project message`. Keep commit messages concise and scoped to the change, for example `docs: refine turn resolution flow` or `design: align room lifecycle wording`. Pull requests should summarize the design change, list affected documents, call out any MVP scope decisions, and note open questions or follow-up docs.
 
 ## Contributor Notes
-Do not invent implementation details that contradict the current design documents. Treat `requirements.md` as the behavioral source of truth, and update `design.md` in the same change when architectural implications shift.
+Treat `01 - design/requirements-mvp.md` as the current MVP behavioral source of truth. Use the older `design.md` for background only when it still matches MVP scope, and update related system or plan documents in the same change when a source-of-truth rule shifts.
+
+For Linear workflow, parent stories default to `human`, execution-oriented subtasks usually use `ai-agent`, and both labels are reserved for genuinely shared execution work. Keep the detailed role split in the ticket body, and use [learning.md](/E:/go-royal/learning.md) as the detailed reference for planning and task-management conventions.

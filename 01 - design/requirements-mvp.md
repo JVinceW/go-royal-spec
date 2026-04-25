@@ -4,9 +4,9 @@
 
 This document defines the first playable MVP requirements for Project Go-Royale.
 
-It is intentionally narrower than the original [requirements.md](</e:/new-game/01 - design/requirements.md>) and is based on:
+It is intentionally narrower than the original [requirements.md](</E:/go-royal/01 - design/requirements.md>) and is based on:
 
-- The project vision in [Project-Go-Royale-GDD-1Page.md](</e:/new-game/01 - design/Project-Go-Royale-GDD-1Page.md>)
+- The project vision in [Project-Go-Royale-GDD-1Page.md](</E:/go-royal/01 - design/Project-Go-Royale-GDD-1Page.md>)
 - Later discussion that split the project into `Gameplay` and `Networking`
 - A deliberate MVP scope cut focused on validating the core tactical loop first
 
@@ -313,11 +313,20 @@ This MVP requirements file is intended to feed the next layer of documentation:
 - Feature-split development specs for `networking`
 - A fresh technical `design.md` written later from the stable MVP requirements, reusing only valid material from the older reference design
 
+Current MVP system docs:
+
+- [mvp-system-overview.md](</E:/go-royal/01 - design/systems/mvp-system-overview.md>)
+- [gameplay-mvp-system.md](</E:/go-royal/01 - design/systems/gameplay-mvp-system.md>)
+- [networking-mvp-system.md](</E:/go-royal/01 - design/systems/networking-mvp-system.md>)
+- [feature-core-match-loop.md](</E:/go-royal/01 - design/systems/feature-core-match-loop.md>)
+- [feature-default-map.md](</E:/go-royal/01 - design/systems/feature-default-map.md>)
+- [feature-units-combat.md](</E:/go-royal/01 - design/systems/feature-units-combat.md>)
+- [feature-turn-resolution.md](</E:/go-royal/01 - design/systems/feature-turn-resolution.md>)
+- [feature-room-multiplayer.md](</E:/go-royal/01 - design/systems/feature-room-multiplayer.md>)
+
 Open items still expected to be refined in later docs:
 
-- Exact AP values
-- Exact unit stats
-- Exact starting unit counts or starting economy model
-- Exact default map layout
-- Exact conflict-resolution details for simultaneous movement and attack
-- Timeout / AFK handling detail for MVP
+- Exact Unity/server config storage format
+- Exact client-side UI preview behavior
+- Exact first-build disconnect elimination policy
+- Exact production direction for split balance assets

@@ -4,7 +4,7 @@
 
 This document defines the first system-level shape of Project Go-Royale MVP.
 
-It is based on [requirements-mvp.md](</e:/new-game/01 - design/requirements-mvp.md>) and intentionally avoids relying on the older [design.md](</e:/new-game/01 - design/design.md>) as a source of truth. Material from the older design can be reused later only when it still matches the MVP scope.
+It is based on [requirements-mvp.md](</E:/go-royal/01 - design/requirements-mvp.md>) and intentionally avoids relying on the older [design.md](</E:/go-royal/01 - design/design.md>) as a source of truth. Material from the older design can be reused later only when it still matches the MVP scope.
 
 ## MVP System Goal
 
@@ -129,7 +129,12 @@ The MVP system SHALL leave the following outside the first system design:
 
 The initial system docs are:
 
-- [gameplay-mvp-system.md](</e:/new-game/01 - design/systems/gameplay-mvp-system.md>)
-- [networking-mvp-system.md](</e:/new-game/01 - design/systems/networking-mvp-system.md>)
+- [gameplay-mvp-system.md](</E:/go-royal/01 - design/systems/gameplay-mvp-system.md>)
+- [networking-mvp-system.md](</E:/go-royal/01 - design/systems/networking-mvp-system.md>)
+- [feature-core-match-loop.md](</E:/go-royal/01 - design/systems/feature-core-match-loop.md>)
+- [feature-default-map.md](</E:/go-royal/01 - design/systems/feature-default-map.md>)
+- [feature-units-combat.md](</E:/go-royal/01 - design/systems/feature-units-combat.md>)
+- [feature-turn-resolution.md](</E:/go-royal/01 - design/systems/feature-turn-resolution.md>)
+- [feature-room-multiplayer.md](</E:/go-royal/01 - design/systems/feature-room-multiplayer.md>)
 
 Later feature docs should reference these system docs and stay inside the MVP boundary unless the requirements are updated first.
