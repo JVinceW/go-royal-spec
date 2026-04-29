@@ -38,16 +38,16 @@ Finalize player state after combat and shrink removals, then end the match when 
 
 ## Implementation Tasks
 
-- [ ] Count surviving units for each player after combat and shrink resolution.
-- [ ] Mark players with no surviving units as eliminated.
-- [ ] Prevent eliminated players from submitting future turn plans through validation/loop checks.
-- [ ] Keep eliminated player records in final match state for results display.
-- [ ] Determine whether exactly one non-eliminated player remains.
-- [ ] Set winner state when exactly one player remains.
-- [ ] Transition the match to ended state when a winner exists.
-- [ ] Define deterministic all-players-eliminated behavior for MVP and surface it as an explicit result if no winner can be declared.
-- [ ] Emit elimination and winner events.
-- [ ] Write Edit Mode tests for player elimination, active player survival, winner declaration, no-winner/all-eliminated behavior, and ended phase transition.
+- [x] Count surviving units for each player after combat and shrink resolution.
+- [x] Mark players with no surviving units as eliminated.
+- [x] Prevent eliminated players from submitting future turn plans through validation/loop checks.
+- [x] Keep eliminated player records in final match state for results display.
+- [x] Determine whether exactly one non-eliminated player remains.
+- [x] Set winner state when exactly one player remains.
+- [x] Transition the match to ended state when a winner exists.
+- [x] Define deterministic all-players-eliminated behavior for MVP and surface it as an explicit result if no winner can be declared.
+- [x] Emit elimination and winner events.
+- [x] Write Edit Mode tests for player elimination, active player survival, winner declaration, no-winner/all-eliminated behavior, and ended phase transition.
 
 ## Acceptance Criteria
 

@@ -41,17 +41,17 @@ Create the Unity shared authoritative local state model used by prepare, plannin
 
 ## Implementation Tasks
 
-- [ ] Add `MvpMatchState` or equivalent root state object for one match.
-- [ ] Add player records with player ID, player slot, display name, and status.
-- [ ] Add unit records with unit ID, owner slot/player, unit type, HP, position, and alive flag.
-- [ ] Add match phase values for prepare, planning, resolving, ended, and invalid/error if needed.
-- [ ] Track current turn number.
-- [ ] Track current shrink step and active safe zone.
-- [ ] Track submitted turn plans only if this task owns storage; otherwise leave storage to turn-plan validation/loop tasks.
-- [ ] Track winner state separately from eliminated player records.
-- [ ] Define deterministic state transition expectations: methods should return updated state/results rather than relying on scene objects.
-- [ ] Add validation helpers/tests for missing players, duplicate unit IDs, unknown owners, and invalid phase transitions used by later systems.
-- [ ] Write Edit Mode tests that construct a minimal valid match state and verify explicit player/unit/winner/shrink fields.
+- [x] Add `MvpMatchState` or equivalent root state object for one match.
+- [x] Add player records with player ID, player slot, display name, and status.
+- [x] Add unit records with unit ID, owner slot/player, unit type, HP, position, and alive flag.
+- [x] Add match phase values for prepare, planning, resolving, ended, and invalid/error if needed.
+- [x] Track current turn number.
+- [x] Track current shrink step and active safe zone.
+- [x] Track submitted turn plans only if this task owns storage; otherwise leave storage to turn-plan validation/loop tasks.
+- [x] Track winner state separately from eliminated player records.
+- [x] Define deterministic state transition expectations: methods should return updated state/results rather than relying on scene objects.
+- [x] Add validation helpers/tests for missing players, duplicate unit IDs, unknown owners, and invalid phase transitions used by later systems.
+- [x] Write Edit Mode tests that construct a minimal valid match state and verify explicit player/unit/winner/shrink fields.
 
 ## Acceptance Criteria
 

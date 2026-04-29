@@ -39,16 +39,16 @@ Implement deterministic local match creation and initial MVP unit placement befo
 
 ## Implementation Tasks
 
-- [ ] Add a factory/service for creating a new four-player MVP match state.
-- [ ] Assign each player to exactly one fixed player slot.
-- [ ] Assign each player slot to its fixed formation zone.
-- [ ] Create the default starting roster from balance config for each player.
-- [ ] Place each player's Infantry, Archer, and Cavalry inside the owner formation zone.
-- [ ] Ensure starting unit positions are deterministic and non-overlapping.
-- [ ] Reject or report setup errors for unknown players, invalid cells, duplicate units, or non-MVP unit types.
-- [ ] Lock initial formations when prepare completes.
-- [ ] Transition the match state from prepare phase to turn planning.
-- [ ] Write Edit Mode tests for four-player creation, starting roster, owner formation containment, non-overlap, and phase transition.
+- [x] Add a factory/service for creating a new four-player MVP match state.
+- [x] Assign each player to exactly one fixed player slot.
+- [x] Assign each player slot to its fixed formation zone.
+- [x] Create the default starting roster from balance config for each player.
+- [x] Place each player's Infantry, Archer, and Cavalry inside the owner formation zone.
+- [x] Ensure starting unit positions are deterministic and non-overlapping.
+- [x] Reject or report setup errors for unknown players, invalid cells, duplicate units, or non-MVP unit types.
+- [x] Lock initial formations when prepare completes.
+- [x] Transition the match state from prepare phase to turn planning.
+- [x] Write Edit Mode tests for four-player creation, starting roster, owner formation containment, non-overlap, and phase transition.
 
 ## Acceptance Criteria
 

@@ -37,17 +37,17 @@ Resolve validated movement actions deterministically after all active turn plans
 
 ## Implementation Tasks
 
-- [ ] Add movement resolution entry point that accepts match state plus accepted turn plans.
-- [ ] Collect all validated movement actions for the current turn.
-- [ ] Preserve starting positions until conflict evaluation is complete.
-- [ ] Re-check destination cells against the fixed map and current safe zone before applying.
-- [ ] Detect simultaneous movement conflicts into the same destination cell.
-- [ ] Cancel all moves that target the same contested destination cell.
-- [ ] Apply non-conflicting valid moves to the next match state.
-- [ ] Keep units in their original position when movement is canceled.
-- [ ] Emit movement result events for applied moves, canceled conflicts, and rejected stale/invalid moves.
-- [ ] Keep ordering deterministic by using stable unit/player/action ordering where lists must be processed.
-- [ ] Write Edit Mode tests for single movement, multiple non-conflicting moves, same-cell conflict cancellation, invalid destination behavior, and result events.
+- [x] Add movement resolution entry point that accepts match state plus accepted turn plans.
+- [x] Collect all validated movement actions for the current turn.
+- [x] Preserve starting positions until conflict evaluation is complete.
+- [x] Re-check destination cells against the fixed map and current safe zone before applying.
+- [x] Detect simultaneous movement conflicts into the same destination cell.
+- [x] Cancel all moves that target the same contested destination cell.
+- [x] Apply non-conflicting valid moves to the next match state.
+- [x] Keep units in their original position when movement is canceled.
+- [x] Emit movement result events for applied moves, canceled conflicts, and rejected stale/invalid moves.
+- [x] Keep ordering deterministic by using stable unit/player/action ordering where lists must be processed.
+- [x] Write Edit Mode tests for single movement, multiple non-conflicting moves, same-cell conflict cancellation, invalid destination behavior, and result events.
 
 ## Acceptance Criteria
 

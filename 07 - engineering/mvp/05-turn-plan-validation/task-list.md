@@ -39,18 +39,18 @@ Validate Unity gameplay intent data before deterministic turn resolution mutates
 
 ## Implementation Tasks
 
-- [ ] Add `TurnPlan` for one player's submitted actions.
-- [ ] Add action types for movement and attack only.
-- [ ] Define movement action fields as acting unit ID and destination `GridPosition`.
-- [ ] Define attack action fields as attacker unit ID and target unit ID.
-- [ ] Add a validation result type with success/failure and readable error messages.
-- [ ] Validate that the submitting player exists and is active.
-- [ ] Validate that acting units belong to the submitting player and are alive.
-- [ ] Validate movement destinations are inside the map, inside the current safe zone, and legal for the unit range.
-- [ ] Validate attack targets are enemy units, alive, and in valid range from current positions.
-- [ ] Calculate AP cost from config and reject plans exceeding the turn budget.
-- [ ] Reject unsupported action types, duplicate impossible references, and plans submitted outside the planning phase.
-- [ ] Write Edit Mode tests for valid plans, eliminated player rejection, dead unit rejection, ownership rejection, invalid movement, invalid attack range, and AP overspend.
+- [x] Add `TurnPlan` for one player's submitted actions.
+- [x] Add action types for movement and attack only.
+- [x] Define movement action fields as acting unit ID and destination `GridPosition`.
+- [x] Define attack action fields as attacker unit ID and target unit ID.
+- [x] Add a validation result type with success/failure and readable error messages.
+- [x] Validate that the submitting player exists and is active.
+- [x] Validate that acting units belong to the submitting player and are alive.
+- [x] Validate movement destinations are inside the map, inside the current safe zone, and legal for the unit range.
+- [x] Validate attack targets are enemy units, alive, and in valid range from current positions.
+- [x] Calculate AP cost from config and reject plans exceeding the turn budget.
+- [x] Reject unsupported action types, duplicate impossible references, and plans submitted outside the planning phase.
+- [x] Write Edit Mode tests for valid plans, eliminated player rejection, dead unit rejection, ownership rejection, invalid movement, invalid attack range, and AP overspend.
 
 ## Acceptance Criteria
 

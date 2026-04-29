@@ -37,18 +37,18 @@ Create the Unity shared gameplay primitives that every later MVP rule system dep
 
 ## Implementation Tasks
 
-- [ ] Add `GridPosition` with zero-based `Row` and `Column` values.
-- [ ] Add `GridPosition.ManhattanDistanceTo(GridPosition other)`.
-- [ ] Add map bounds constants for a fixed 9x9 board.
-- [ ] Add a board-position validation helper for coordinates inside the 9x9 map.
-- [ ] Add `PlayerSlot` identifiers for exactly four players.
-- [ ] Add `FormationZone` or equivalent safe rectangular/cell-set representation.
-- [ ] Add fixed 3x3 corner formation zones for the four player slots.
-- [ ] Add `SafeZone` with containment checks for rectangular bounds.
-- [ ] Add safe-zone presets for 9x9, 7x7, 5x5, and 3x3.
-- [ ] Add `UnitType` identifiers limited to Infantry, Archer, and Cavalry.
-- [ ] Add stable lightweight player/unit ID value types only if needed by downstream state objects.
-- [ ] Write Edit Mode tests for Manhattan distance, map bounds, formation-zone containment, safe-zone containment, and MVP unit type limits.
+- [x] Add `GridPosition` with zero-based `Row` and `Column` values.
+- [x] Add `GridPosition.ManhattanDistanceTo(GridPosition other)`.
+- [x] Add map bounds constants for a fixed 9x9 board.
+- [x] Add a board-position validation helper for coordinates inside the 9x9 map.
+- [x] Add `PlayerSlot` identifiers for exactly four players.
+- [x] Add `FormationZone` or equivalent safe rectangular/cell-set representation.
+- [x] Add fixed 3x3 corner formation zones for the four player slots.
+- [x] Add `SafeZone` with containment checks for rectangular bounds.
+- [x] Add safe-zone presets for 9x9, 7x7, 5x5, and 3x3.
+- [x] Add `UnitType` identifiers limited to Infantry, Archer, and Cavalry.
+- [x] Add stable lightweight player/unit ID value types only if needed by downstream state objects.
+- [x] Write Edit Mode tests for Manhattan distance, map bounds, formation-zone containment, safe-zone containment, and MVP unit type limits.
 
 ## Acceptance Criteria
 

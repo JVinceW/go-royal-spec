@@ -37,16 +37,16 @@ Define Unity-readable MVP roster, stats, AP costs, and counter tuning for the de
 
 ## Implementation Tasks
 
-- [ ] Add an MVP balance config object or static default config provider.
-- [ ] Define the roster as exactly Infantry, Archer, and Cavalry.
-- [ ] Define HP, base attack, movement range, and attack range for each unit type.
-- [ ] Define move AP cost, attack AP cost, and per-turn AP budget.
-- [ ] Define the default starting loadout as one Infantry, one Archer, and one Cavalry per player.
-- [ ] Define Infantry counters Archer, Archer counters Cavalry, and Cavalry counters Infantry.
-- [ ] Define normal damage multiplier and counter damage multiplier.
-- [ ] Expose safe-zone sequence data through the same MVP config or through the map defaults.
-- [ ] Add validation helpers/tests for missing stats, duplicate unit types, and non-MVP unit types.
-- [ ] Write Edit Mode tests for roster contents, stat lookup, AP defaults, counter relationships, and safe-zone sequence defaults.
+- [x] Add an MVP balance config object or static default config provider.
+- [x] Define the roster as exactly Infantry, Archer, and Cavalry.
+- [x] Define HP, base attack, movement range, and attack range for each unit type.
+- [x] Define move AP cost, attack AP cost, and per-turn AP budget.
+- [x] Define the default starting loadout as one Infantry, one Archer, and one Cavalry per player.
+- [x] Define Infantry counters Archer, Archer counters Cavalry, and Cavalry counters Infantry.
+- [x] Define normal damage multiplier and counter damage multiplier.
+- [x] Expose safe-zone sequence data through the same MVP config or through the map defaults.
+- [x] Add validation helpers/tests for missing stats, duplicate unit types, and non-MVP unit types.
+- [x] Write Edit Mode tests for roster contents, stat lookup, AP defaults, counter relationships, and safe-zone sequence defaults.
 
 ## Acceptance Criteria
 

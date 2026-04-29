@@ -39,16 +39,16 @@ Apply safe-zone pressure after turn actions by advancing the MVP shrink schedule
 
 ## Implementation Tasks
 
-- [ ] Use the shared safe-zone sequence for 9x9, 7x7, 5x5, and 3x3.
-- [ ] Track current shrink step in match state.
-- [ ] Advance safe zone at the configured MVP timing at the end of turn resolution.
-- [ ] Provide a query for safe cells and unsafe cells in the active safe zone.
-- [ ] Evaluate all surviving units after movement and combat resolution.
-- [ ] Eliminate units outside the active safe zone after shrink resolution.
-- [ ] Leave already-dead units unchanged.
-- [ ] Emit shrink events for new safe-zone bounds and units eliminated by shrink.
-- [ ] Prevent shrink logic from depending on procedural map generation.
-- [ ] Write Edit Mode tests for every shrink step, containment at boundaries, unit survival inside zone, unit death outside zone, and max-shrink behavior.
+- [x] Use the shared safe-zone sequence for 9x9, 7x7, 5x5, and 3x3.
+- [x] Track current shrink step in match state.
+- [x] Advance safe zone at the configured MVP timing at the end of turn resolution.
+- [x] Provide a query for safe cells and unsafe cells in the active safe zone.
+- [x] Evaluate all surviving units after movement and combat resolution.
+- [x] Eliminate units outside the active safe zone after shrink resolution.
+- [x] Leave already-dead units unchanged.
+- [x] Emit shrink events for new safe-zone bounds and units eliminated by shrink.
+- [x] Prevent shrink logic from depending on procedural map generation.
+- [x] Write Edit Mode tests for every shrink step, containment at boundaries, unit survival inside zone, unit death outside zone, and max-shrink behavior.
 
 ## Acceptance Criteria
 

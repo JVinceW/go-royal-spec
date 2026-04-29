@@ -39,17 +39,17 @@ Resolve attacks deterministically with MVP base damage, counter bonuses, range r
 
 ## Implementation Tasks
 
-- [ ] Add combat resolution entry point that accepts post-movement match state plus accepted attack actions.
-- [ ] Validate attack range against the positions used for combat.
-- [ ] Calculate base damage from attacker unit type stats.
-- [ ] Apply configured counter multiplier when attacker counters defender.
-- [ ] Use normal multiplier for non-counter attacks.
-- [ ] Enforce Archer minimum range and Infantry/Cavalry adjacent-only range.
-- [ ] Apply damage to target unit HP.
-- [ ] Mark units dead when HP reaches zero or lower.
-- [ ] Define simultaneous combat so all valid attacks in the step can still contribute before deaths suppress future turns.
-- [ ] Emit combat result events with attacker, defender, damage, multiplier kind, remaining HP, and death state.
-- [ ] Write Edit Mode tests for each counter relationship, non-counter damage, Archer range, melee range, lethal damage, and simultaneous lethal attacks.
+- [x] Add combat resolution entry point that accepts post-movement match state plus accepted attack actions.
+- [x] Validate attack range against the positions used for combat.
+- [x] Calculate base damage from attacker unit type stats.
+- [x] Apply configured counter multiplier when attacker counters defender.
+- [x] Use normal multiplier for non-counter attacks.
+- [x] Enforce Archer minimum range and Infantry/Cavalry adjacent-only range.
+- [x] Apply damage to target unit HP.
+- [x] Mark units dead when HP reaches zero or lower.
+- [x] Define simultaneous combat so all valid attacks in the step can still contribute before deaths suppress future turns.
+- [x] Emit combat result events with attacker, defender, damage, multiplier kind, remaining HP, and death state.
+- [x] Write Edit Mode tests for each counter relationship, non-counter damage, Archer range, melee range, lethal damage, and simultaneous lethal attacks.
 
 ## Acceptance Criteria
 
