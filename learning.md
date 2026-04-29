@@ -52,10 +52,16 @@ When creating or updating planning tickets:
 
 ## Current Reference Pattern
 
-The current MVP gameplay backlog is the reference example:
+The current MVP implementation backlog is the reference example:
 
 - `GO-11` is the parent story and should remain `human`.
 - `GO-5` through `GO-10` are execution-oriented child tasks and should remain `ai-agent`.
+- `GO-12` is the parent story for local loop and harness work and should remain `human`.
+- `GO-15` and `GO-16` are execution-oriented child tasks and should remain `ai-agent`.
+- `GO-13` is the parent story for room-based multiplayer and should remain `human`.
+- `GO-17` and `GO-18` are execution-oriented child tasks and should remain `ai-agent`.
+- `GO-14` is the parent story for multiplayer match UI and should remain `human`.
+- `GO-19` is an execution-oriented child task and should remain `ai-agent`.
 
 Execution order:
 
@@ -65,6 +71,11 @@ Execution order:
 4. `GO-8` Add deterministic combat rules
 5. `GO-9` Add MVP turn plans and movement resolution
 6. `GO-10` Add shrink, elimination, and winner checks
+7. `GO-15` Integrate deterministic core match loop
+8. `GO-16` Add local debug UI or test harness
+9. `GO-17` Add networking room flow
+10. `GO-18` Add networked turn submission
+11. `GO-19` Build multiplayer match UI
 
 Core related documents for that backlog:
 
@@ -75,6 +86,7 @@ Core related documents for that backlog:
 - `01 - design/systems/feature-default-map.md`
 - `01 - design/systems/feature-units-combat.md`
 - `01 - design/systems/feature-turn-resolution.md`
+- `07 - engineering/mvp/*/task-list.md`
 
 ## Do / Don't
 

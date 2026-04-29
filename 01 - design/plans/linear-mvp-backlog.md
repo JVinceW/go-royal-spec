@@ -1,166 +1,85 @@
-# Linear Backlog: MVP Core Gameplay
+# Linear Backlog: MVP Implementation
 
 ## Purpose
 
-This file is the Linear-ready task breakdown for the first MVP development slice.
+This file tracks the current Linear implementation shape for Project Go-Royale MVP.
 
-The Linear MCP is not currently exposed to this Codex session through available MCP resources or tools. Until that is connected, this document is the local source for issue titles, descriptions, labels, and acceptance criteria.
+It started as the local source for creating the first gameplay-rule tickets. Linear is now connected in Codex, so this file should mirror the active issue hierarchy and execution order rather than act as a placeholder backlog.
 
-## Recommended Linear Setup
+## Active Linear Setup
 
 Project:
 
 ```text
-Project Go-Royale MVP
+go-royal
 ```
 
-Milestone:
+Team:
 
 ```text
-MVP Core Gameplay Rules
+Go-team-shared
 ```
 
 Labels:
 
 ```text
-area:gameplay
-area:unity
-type:implementation
-type:test
-mvp
+human
+ai-agent
+Feature
 ```
 
-## Issues
+## Current Issue Hierarchy
 
-### Issue 1: Create MVP gameplay value types
+### Parent Stories
 
-Labels: `area:gameplay`, `area:unity`, `type:implementation`, `mvp`
+- `GO-11` MVP core gameplay rules - `human`
+- `GO-12` MVP local gameplay loop and debug harness - `human`
+- `GO-13` MVP room-based multiplayer - `human`
+- `GO-14` MVP multiplayer match UI - `human`
 
-Description:
+### Child Implementation Tasks
 
-Create `GridPosition` and `SafeZone` in `Game.Common` as the foundation for map, movement, and safe-zone rules.
+#### GO-11 child tasks
 
-Acceptance criteria:
+- `GO-5` Create MVP gameplay value types - `Done`
+- `GO-6` Add MVP balance config and default map - `Done`
+- `GO-7` Add match state and default unit setup - `In Progress`
+- `GO-8` Add deterministic combat rules - `Done`
+- `GO-9` Add MVP turn plans and movement resolution - `Done`
+- `GO-10` Add shrink, elimination, and winner checks - `Done`
 
-- `GridPosition` stores row and column.
-- `GridPosition.ManhattanDistanceTo` returns Manhattan distance.
-- `SafeZone.Contains` detects positions inside rectangular bounds.
-- Edit Mode tests cover distance and safe-zone containment.
+#### GO-12 child tasks
 
-Source plan:
+- `GO-15` Integrate deterministic core match loop - `Backlog`
+- `GO-16` Add local debug UI or test harness - `Backlog`
 
-- [mvp-core-gameplay-implementation.md](</E:/go-royal/01 - design/plans/mvp-core-gameplay-implementation.md>) Task 1
+#### GO-13 child tasks
 
-### Issue 2: Add MVP balance config and default map
+- `GO-17` Add networking room flow - `Backlog`
+- `GO-18` Add networked turn submission - `Backlog`
 
-Labels: `area:gameplay`, `area:unity`, `type:implementation`, `mvp`
+#### GO-14 child tasks
 
-Description:
+- `GO-19` Build multiplayer match UI - `Backlog`
 
-Create the shared MVP balance config and fixed 9x9 default map definition.
+## Recommended Execution Order
 
-Acceptance criteria:
+1. `GO-7` Complete match state and default unit setup.
+2. `GO-15` Integrate deterministic core match loop.
+3. `GO-16` Add local debug UI or test harness.
+4. `GO-17` Add networking room flow.
+5. `GO-18` Add networked turn submission.
+6. `GO-19` Build multiplayer match UI.
 
-- Balance config exposes AP, action costs, counter multiplier, starting loadout, and unit stats.
-- Default map is 9x9.
-- Four 3x3 formation zones exist and do not overlap.
-- Safe-zone sequence supports 9x9, 7x7, 5x5, and 3x3.
-- Edit Mode tests cover config defaults and map shape.
+## Local Task-List Mapping
 
-Source plan:
+- `GO-5` through `GO-10` map to `07 - engineering/mvp/01` through `09`.
+- `GO-15` maps to [10-core-match-loop/task-list.md](</E:/go-royal/07 - engineering/mvp/10-core-match-loop/task-list.md>).
+- `GO-16` maps to [11-local-debug-ui-or-test-harness/task-list.md](</E:/go-royal/07 - engineering/mvp/11-local-debug-ui-or-test-harness/task-list.md>).
+- `GO-17` maps to [12-networking-room-flow/task-list.md](</E:/go-royal/07 - engineering/mvp/12-networking-room-flow/task-list.md>).
+- `GO-18` maps to [13-networked-turn-submission/task-list.md](</E:/go-royal/07 - engineering/mvp/13-networked-turn-submission/task-list.md>).
+- `GO-19` maps to [14-multiplayer-match-ui/task-list.md](</E:/go-royal/07 - engineering/mvp/14-multiplayer-match-ui/task-list.md>).
 
-- [mvp-core-gameplay-implementation.md](</E:/go-royal/01 - design/plans/mvp-core-gameplay-implementation.md>) Task 2
+## Sync Note
 
-### Issue 3: Add match state and default unit setup
-
-Labels: `area:gameplay`, `area:unity`, `type:implementation`, `mvp`
-
-Description:
-
-Create player, unit, and match-state models plus initial MVP match creation.
-
-Acceptance criteria:
-
-- Initial match contains four players.
-- Each player receives one Infantry, one Archer, and one Cavalry.
-- Units use stats from balance config.
-- Units start inside their owner formation zone.
-- Edit Mode tests cover initial player and unit setup.
-
-Source plan:
-
-- [mvp-core-gameplay-implementation.md](</E:/go-royal/01 - design/plans/mvp-core-gameplay-implementation.md>) Task 3
-
-### Issue 4: Add deterministic combat rules
-
-Labels: `area:gameplay`, `area:unity`, `type:implementation`, `mvp`
-
-Description:
-
-Implement attack + HP combat, counter relationships, damage calculation, and attack range checks.
-
-Acceptance criteria:
-
-- Infantry counters Archer.
-- Archer counters Cavalry.
-- Cavalry counters Infantry.
-- Counter attacks use the configured counter multiplier.
-- Non-counter attacks use the normal multiplier.
-- Archer cannot attack adjacent targets.
-- Infantry and Cavalry attack adjacent targets only.
-- Edit Mode tests cover damage and range behavior.
-
-Source plan:
-
-- [mvp-core-gameplay-implementation.md](</E:/go-royal/01 - design/plans/mvp-core-gameplay-implementation.md>) Task 4
-
-### Issue 5: Add MVP turn plans and movement resolution
-
-Labels: `area:gameplay`, `area:unity`, `type:implementation`, `mvp`
-
-Description:
-
-Create turn action, turn plan, resolution result, and minimal deterministic movement resolution.
-
-Acceptance criteria:
-
-- Turn plans support move and attack actions.
-- Non-conflicting moves apply.
-- Conflicting moves to the same cell are canceled.
-- Resolution emits readable events.
-- Edit Mode tests cover movement application and conflict cancellation.
-
-Source plan:
-
-- [mvp-core-gameplay-implementation.md](</E:/go-royal/01 - design/plans/mvp-core-gameplay-implementation.md>) Task 5
-
-### Issue 6: Add shrink, elimination, and winner checks
-
-Labels: `area:gameplay`, `area:unity`, `type:implementation`, `mvp`
-
-Description:
-
-Implement safe-zone shrink elimination, player elimination, and winner detection.
-
-Acceptance criteria:
-
-- Units outside the current safe zone are eliminated after shrink.
-- Players with no surviving units are eliminated.
-- Winner is returned when exactly one player remains active.
-- Turn resolution integrates shrink and elimination.
-- Edit Mode tests cover shrink, player elimination, and winner logic.
-
-Source plan:
-
-- [mvp-core-gameplay-implementation.md](</E:/go-royal/01 - design/plans/mvp-core-gameplay-implementation.md>) Task 6
-
-## MCP Status
-
-Checked from Codex:
-
-```text
-functions.list_mcp_resources -> []
-functions.list_mcp_resource_templates -> []
-```
-
-No Linear MCP resources or templates are currently exposed to this session. When Linear MCP is available, create the issues above under the `Project Go-Royale MVP` project and keep issue status aligned with the checkboxes in the implementation plan.
+This snapshot reflects Linear state observed from Codex on 2026-04-29.
