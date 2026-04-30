@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844" role="img" aria-labelledby="title desc">
+  <title id="title">Join Lobby Wireframe</title>
+  <desc id="desc">A minimal mobile join lobby screen with one room code input field and one Join Room button.</desc>
+  <rect x="0" y="0" width="390" height="844" fill="#f8f8f8"/>
+  <rect x="16" y="16" width="358" height="812" rx="22" fill="#ffffff" stroke="#1f2933" stroke-width="2"/>
+  <rect x="74" y="354" width="242" height="52" rx="4" fill="#ffffff" stroke="#2d3748" stroke-width="2"/>
+  <text x="94" y="387" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#6b7280">Room Code</text>
+  <rect x="74" y="438" width="242" height="52" rx="4" fill="#e9ecef" stroke="#2d3748" stroke-width="2"/>
+  <text x="195" y="471" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#111827">Join Room</text>
+</svg>
