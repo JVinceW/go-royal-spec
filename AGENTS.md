@@ -27,7 +27,7 @@ This repository has git history, and recent commits use short imperative subject
 ## Contributor Notes
 Treat `01 - design/requirements-mvp.md` as the current MVP behavioral source of truth. Use the older `design.md` for background only when it still matches MVP scope, and update related system, plan, and engineering-task documents in the same change when a source-of-truth rule shifts.
 
-For multiplayer backend and networking planning, treat `05 - decisions/2026-04-29-spacetimedb-authoritative-networking.md` as the current architecture decision baseline until it is replaced by a newer decision note. New room-flow, transport, shared-contract, or local-dev backend planning should extend that decision instead of inventing parallel assumptions.
+For multiplayer backend and networking planning, treat `05 - decisions/2026-04-29-spacetimedb-authoritative-networking.md` as the current architecture decision baseline until it is replaced by a newer decision note. Use `05 - decisions/2026-04-30-room-flow-implementation-decision.md` for room lifecycle, slot, host, and disconnect rules, and use `05 - decisions/2026-04-30-networked-turn-submission-and-plan-privacy.md` for hidden turn-plan submission, plan privacy, timeout locking, and MVP log storage. New room-flow, transport, shared-contract, phase-timer, turn-submission, or local-dev backend planning should extend these decisions instead of inventing parallel assumptions.
 
 This repo is not an implementation workspace. Do not describe local code changes as if they happened here; capture planning intent, requirements, execution order, and downstream task breakdowns instead.
 

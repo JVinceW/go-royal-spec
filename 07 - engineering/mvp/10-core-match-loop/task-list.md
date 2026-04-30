@@ -1,4 +1,4 @@
-﻿# Core Match Loop Task List
+# Core Match Loop Task List
 
 ## Source References
 
@@ -23,7 +23,7 @@ Connect the pure rule systems into a complete deterministic local Unity gameplay
 
 - Primary Linear issue: `GO-15`.
 - Parent Linear story: `GO-12 MVP local gameplay loop and debug harness`.
-- Current Linear status at last sync: `Backlog`.
+- Current Linear status at last sync: `Done`.
 - Dependency type: local gameplay integration milestone.
 
 ## Blocking Relationships
@@ -43,19 +43,19 @@ Connect the pure rule systems into a complete deterministic local Unity gameplay
 
 ## Implementation Tasks
 
-- [ ] Add loop orchestration for prepare, planning, resolving, shrink, elimination, and match end.
-- [ ] Start a match with fixed map, four player slots, and default setup.
-- [ ] Open turn planning for active players only.
-- [ ] Accept one valid turn plan per active player per turn.
-- [ ] Reject duplicate or late plans for already-resolved turns.
-- [ ] Start resolution only after all active plans are available or the caller supplies empty timeout plans.
-- [ ] Resolve movement before combat.
-- [ ] Resolve combat before shrink.
-- [ ] Resolve shrink before elimination and winner checks.
-- [ ] Advance turn number only when the match continues.
-- [ ] Stop accepting plans when winner state is set.
-- [ ] Return a resolution result that includes state changes and event summaries.
-- [ ] Write Edit Mode tests for full setup-to-planning flow, one complete turn, eliminated-player exclusion, winner-stop behavior, and deterministic repeat runs.
+- [x] Add loop orchestration for prepare, planning, resolving, shrink, elimination, and match end.
+- [x] Start a match with fixed map, four player slots, and default setup.
+- [x] Open turn planning for active players only.
+- [x] Accept one valid turn plan per active player per turn.
+- [x] Reject duplicate or late plans for already-resolved turns.
+- [x] Start resolution only after all active plans are available or the caller supplies empty timeout plans.
+- [x] Resolve movement before combat.
+- [x] Resolve combat before shrink.
+- [x] Resolve shrink before elimination and winner checks.
+- [x] Advance turn number only when the match continues.
+- [x] Stop accepting plans when winner state is set.
+- [x] Return a resolution result that includes state changes and event summaries.
+- [x] Write Edit Mode tests for full setup-to-planning flow, one complete turn, eliminated-player exclusion, winner-stop behavior, and deterministic repeat runs.
 
 ## Acceptance Criteria
 
@@ -64,6 +64,12 @@ Connect the pure rule systems into a complete deterministic local Unity gameplay
 - The loop excludes eliminated players from later planning.
 - The loop can run without networking.
 - Edit Mode tests cover integration across the core rule systems.
+
+## Verification Notes
+
+- Runtime/test compile verification passed for the full MVP rule set after GO-15 implementation.
+- Review workflow found no new correctness issues in the GO-15 slice.
+- Unity Edit Mode runner was not executed in that update pass, so verification remains compile-level.
 
 ## Out Of Scope
 

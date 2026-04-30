@@ -12,6 +12,8 @@ The MVP needs real 4-player multiplayer, but it does not need automated matchmak
 - [networking-mvp-system.md](</E:/go-royal/01 - design/systems/networking-mvp-system.md>)
 - [feature-core-match-loop.md](</E:/go-royal/01 - design/systems/feature-core-match-loop.md>)
 - [feature-turn-resolution.md](</E:/go-royal/01 - design/systems/feature-turn-resolution.md>)
+- [2026-04-29-spacetimedb-authoritative-networking.md](</E:/go-royal/05 - decisions/2026-04-29-spacetimedb-authoritative-networking.md>)
+- [2026-04-30-room-flow-implementation-decision.md](</E:/go-royal/05 - decisions/2026-04-30-room-flow-implementation-decision.md>)
 
 ## Feature Goal
 
@@ -74,8 +76,7 @@ The system contract SHALL remain transport-agnostic:
 The MVP room lifecycle SHALL be:
 
 ```text
-RoomCreated
-  -> WaitingForPlayers
+WaitingForPlayers
   -> ReadyToStart
   -> MatchActive
   -> MatchEnded
@@ -92,7 +93,7 @@ When a host creates a room, the server SHALL:
 
 - Generate a unique room ID.
 - Create an empty room state.
-- Add the host as Player1 unless slot assignment is randomized later.
+- Add the host as Player1.
 - Return the room ID and host player ID.
 - Broadcast the updated room state to connected room members.
 
@@ -129,11 +130,11 @@ The MVP SHALL support exactly 4 player slots:
 | Player3 | Bottom-left |
 | Player4 | Bottom-right |
 
-Slot assignment SHOULD be stable for the duration of the match.
+Slot assignment SHALL be stable for the duration of the match.
 
-For MVP, the host SHOULD default to Player1 and join order SHOULD fill Player2, Player3, and Player4.
+For MVP, the host SHALL default to Player1 and join order SHALL fill Player2, Player3, and Player4.
 
-Production may later randomize or rebalance slot assignment.
+Production may later randomize or rebalance slot assignment, but MVP does not.
 
 ## Player Identity
 
@@ -151,11 +152,13 @@ The server SHOULD track:
 
 Persistent accounts are deferred.
 
+If no usable display name is supplied, the server SHALL assign a fallback development name.
+
 ## Starting A Match
 
 A match SHALL start only when exactly 4 players are present.
 
-The MVP SHOULD allow the host to start the match once all 4 slots are filled.
+The MVP SHALL require a host-issued `StartMatch` intent once all 4 slots are filled.
 
 When the match starts, the server SHALL:
 
@@ -237,15 +240,7 @@ Recommended default:
 - Before match start: disconnected players are removed from the room.
 - During match: disconnected players remain in the match.
 - During match: a disconnected player's missing turn plan becomes an empty plan.
-- After 2 consecutive missed turn submissions, the player MAY be eliminated by configurable playtest policy.
-
-Recommended configurable value:
-
-```text
-missed_turns_before_elimination = 2
-```
-
-The first build MAY keep disconnected players submitting empty plans instead of eliminating them if that is easier for debugging.
+- The first playable MVP SHALL NOT eliminate players purely because they disconnected or missed submissions.
 
 ## Error Handling
 
@@ -300,12 +295,20 @@ Initial tests SHOULD cover:
 - Missing plans become empty plans when the timer expires.
 - Room broadcasts state after player join.
 - Room broadcasts state after turn resolution.
+- Host leaving before match start closes the room.
+- Disconnected players are removed before match start.
+- Disconnected players remain as empty-plan participants after match start.
 
-## Open Decisions For Implementation Planning
+## Locked MVP Decisions
 
-These decisions should be confirmed when coding starts:
+The following room-flow decisions are now locked for MVP implementation:
 
-- Whether host-only start is required or the room auto-starts when full
-- Whether the first server is embedded in Unity for local testing or runs as a separate lightweight service
-- Whether player display names are typed by users or auto-generated for MVP
-- Whether disconnected players are eliminated after missed turns in the first build or only submit empty plans
+- SpacetimeDB is the single room authority.
+- Room codes use 4 uppercase alphanumeric characters.
+- The host is Player1.
+- Join order fills Player2, Player3, then Player4.
+- The room does not auto-start when full.
+- Only the host may start the match.
+- Host migration is not supported.
+- Reconnect recovery is not supported.
+- Disconnects during match become empty-plan participation, not disconnect-based elimination.
