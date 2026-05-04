@@ -187,6 +187,8 @@ The MVP SHOULD support these client intent categories:
 
 Every client intent SHALL include enough player/session information for the server to validate ownership.
 
+> **MVP note (2026-05-01):** No dedicated `Ping` reducer is implemented for the MVP. The SpacetimeDB module relies on the SDK's built-in connection presence (`Identity` lifecycle + connection close events) to detect liveness; `last_seen_at` and `PlayerDisconnected` are driven from those signals rather than from an application-level heartbeat. Promote `Ping` to a real reducer only if presence proves insufficient post-MVP.
+
 ## Server Broadcast Messages
 
 The MVP SHOULD support these broadcast categories:

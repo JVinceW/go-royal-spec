@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="380" viewBox="0 0 800 380">
+  <style>
+    .frame{fill:#fff;stroke:#111;stroke-width:3}.panel{fill:#fafafa;stroke:#aaa}.grid{fill:#fff;stroke:#999}.dark{fill:#2b2b2b}.txt{font-family:Arial,sans-serif;fill:#111}.label{font-size:18px;font-weight:700}.big{font-size:58px;font-weight:700}.small{font-size:13px}.btn{font-size:16px;font-weight:700;fill:#fff}.btn2{font-size:16px;font-weight:700;fill:#111}
+  </style>
+  <text class="txt label" x="0" y="24">9. MATCH RESULT</text>
+  <rect class="frame" x="18" y="40" width="760" height="300" rx="14"/>
+  <text class="txt" x="40" y="72" font-size="28">=</text><text class="txt" x="742" y="72" font-size="22">home</text>
+  <rect class="panel" x="55" y="110" width="150" height="180" rx="6"/>
+  <text class="txt label" x="130" y="140" text-anchor="middle">WINNER</text>
+  <text class="txt" x="130" y="190" font-size="44" text-anchor="middle">trophy</text>
+  <text class="txt big" x="130" y="260" text-anchor="middle">P2</text>
+  <rect class="grid" x="250" y="95" width="230" height="190"/>
+  <g stroke="#ddd">
+    <line x1="296" y1="95" x2="296" y2="285"/><line x1="342" y1="95" x2="342" y2="285"/><line x1="388" y1="95" x2="388" y2="285"/><line x1="434" y1="95" x2="434" y2="285"/>
+    <line x1="250" y1="133" x2="480" y2="133"/><line x1="250" y1="171" x2="480" y2="171"/><line x1="250" y1="209" x2="480" y2="209"/><line x1="250" y1="247" x2="480" y2="247"/>
+  </g>
+  <text class="txt small" x="260" y="115">P1</text><text class="txt small" x="455" y="115">P2</text><text class="txt small" x="260" y="270">P3</text><text class="txt small" x="455" y="270">P4</text>
+  <circle class="panel" cx="335" cy="160" r="14"/><text class="txt small" x="335" y="164" text-anchor="middle">8</text>
+  <circle class="panel" cx="385" cy="210" r="14"/><text class="txt small" x="385" y="214" text-anchor="middle">6</text>
+  <circle class="panel" cx="450" cy="250" r="14"/><text class="txt small" x="450" y="254" text-anchor="middle">10</text>
+  <rect class="panel" x="520" y="95" width="220" height="190" rx="6"/>
+  <text class="txt label" x="630" y="125" text-anchor="middle">FINAL STANDINGS</text>
+  <text class="txt label" x="550" y="160">1  P2    crown</text>
+  <text class="txt label" x="550" y="195">2  P1    player</text>
+  <text class="txt label" x="550" y="230">3  P4    player</text>
+  <text class="txt label" x="550" y="265">4  P3    player</text>
+  <rect class="dark" x="280" y="305" width="160" height="42" rx="5"/><text class="btn" x="360" y="332" text-anchor="middle">PLAY AGAIN</text>
+  <rect class="panel" x="470" y="305" width="160" height="42" rx="5"/><text class="btn2" x="550" y="332" text-anchor="middle">BACK TO ROOM</text>
+</svg>

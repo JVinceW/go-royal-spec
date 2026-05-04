@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project Go-Royale — Wireframe Explorer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="primitives.jsx"></script>
+<script type="text/babel" src="screen-prepare.jsx"></script>
+<script type="text/babel" src="screen-battle.jsx"></script>
+<script type="text/babel" src="screen-resolve.jsx"></script>
+<script type="text/babel" src="screen-shrink.jsx"></script>
+
+<script type="text/babel">
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "accent": "per-player",
+  "density": "min",
+  "gridSize": 9,
+  "playerCount": 4
+}/*EDITMODE-END*/;
+
+const TABS = [
+  { id: 'prepare',  num: '1', label: 'Prepare Placement', Comp: window.ScreenPrepare },
+  { id: 'battle',   num: '2', label: 'Battle Planning',   Comp: window.ScreenBattle },
+  { id: 'resolve',  num: '3', label: 'Turn Resolution',   Comp: window.ScreenResolve },
+  { id: 'shrink',   num: '4', label: 'Shrink Zone',       Comp: window.ScreenShrink },
+];
+
+function App() {
+  const [tab, setTab] = React.useState('prepare');
+  const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  const Active = TABS.find(t => t.id === tab).Comp;
+
+  return (
+    <div data-screen-label={`0${TABS.findIndex(t=>t.id===tab)+1} ${TABS.find(t=>t.id===tab).label}`}>
+      <div className="tabbar">
+        <div className="brand">
+          Go-Royale Wireframes
+          <small>4 screens · 4 variations each</small>
+        </div>
+        {TABS.map(t => (
+          <button key={t.id}
+            className={`tab ${tab===t.id?'active':''}`}
+            onClick={() => setTab(t.id)}>
+            <span className="num">{t.num}</span>{t.label}
+          </button>
+        ))}
+      </div>
+
+      <Active
+        size={tweaks.gridSize}
+        accent={tweaks.accent}
+        density={tweaks.density}
+      />
+
+      <TweaksPanel title="Tweaks">
+        <TweakSection title="Visual">
+          <TweakRadio label="Color accent" value={tweaks.accent}
+            options={[
+              {value:'mono', label:'None'},
+              {value:'mono', label:'1-color'},
+              {value:'per-player', label:'Per player'},
+            ]}
+            onChange={v => setTweak('accent', v)} />
+          <TweakRadio label="Density" value={tweaks.density}
+            options={[
+              {value:'min', label:'Minimal'},
+              {value:'default', label:'Default'},
+              {value:'rich', label:'Info-rich'},
+            ]}
+            onChange={v => setTweak('density', v)} />
+        </TweakSection>
+        <TweakSection title="Match">
+          <TweakRadio label="Grid size" value={tweaks.gridSize}
+            options={[
+              {value:7, label:'7×7'},
+              {value:9, label:'9×9'},
+              {value:11, label:'11×11'},
+            ]}
+            onChange={v => setTweak('gridSize', v)} />
+          <TweakRadio label="Players" value={tweaks.playerCount}
+            options={[
+              {value:2, label:'2'},
+              {value:3, label:'3'},
+              {value:4, label:'4'},
+            ]}
+            onChange={v => setTweak('playerCount', v)} />
+        </TweakSection>
+      </TweaksPanel>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+</script>
+</body>
+</html>

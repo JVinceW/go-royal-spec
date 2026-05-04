@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="380" viewBox="0 0 800 380">
+  <style>
+    .frame{fill:#fff;stroke:#111;stroke-width:3}.grid{fill:#fff;stroke:#999}.safe{fill:none;stroke:#777;stroke-dasharray:5 4}.path{stroke:#111;stroke-width:5;fill:none;marker-end:url(#arrow)}.txt{font-family:Arial,sans-serif;fill:#111}.label{font-size:18px;font-weight:700}.small{font-size:12px}.chip{fill:#fafafa;stroke:#aaa}
+  </style>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#111"/></marker></defs>
+  <text class="txt label" x="0" y="24">7. TURN RESOLUTION</text>
+  <rect class="frame" x="18" y="40" width="760" height="300" rx="14"/>
+  <text class="txt" x="40" y="72" font-size="28">=</text>
+  <rect class="chip" x="250" y="50" width="110" height="22"/><text class="txt small" x="305" y="66" text-anchor="middle">RESOLUTION</text>
+  <rect class="chip" x="365" y="50" width="45" height="22"/><text class="txt small" x="387" y="66" text-anchor="middle">R4</text>
+  <rect class="chip" x="720" y="50" width="45" height="22"/><text class="txt small" x="742" y="66" text-anchor="middle">LOG</text>
+  <rect class="grid" x="70" y="80" width="660" height="185"/>
+  <g stroke="#ddd">
+    <line x1="143" y1="80" x2="143" y2="265"/><line x1="216" y1="80" x2="216" y2="265"/><line x1="289" y1="80" x2="289" y2="265"/><line x1="362" y1="80" x2="362" y2="265"/><line x1="435" y1="80" x2="435" y2="265"/><line x1="508" y1="80" x2="508" y2="265"/><line x1="581" y1="80" x2="581" y2="265"/><line x1="654" y1="80" x2="654" y2="265"/>
+    <line x1="70" y1="103" x2="730" y2="103"/><line x1="70" y1="126" x2="730" y2="126"/><line x1="70" y1="149" x2="730" y2="149"/><line x1="70" y1="172" x2="730" y2="172"/><line x1="70" y1="195" x2="730" y2="195"/><line x1="70" y1="218" x2="730" y2="218"/><line x1="70" y1="241" x2="730" y2="241"/>
+  </g>
+  <rect class="safe" x="165" y="100" width="470" height="140"/>
+  <text class="txt small" x="85" y="103">P1</text><text class="txt small" x="695" y="103">P2</text><text class="txt small" x="85" y="250">P3</text><text class="txt small" x="695" y="250">P4</text>
+  <circle class="chip" cx="310" cy="145" r="18"/><text class="txt small" x="310" y="149" text-anchor="middle">8</text>
+  <path class="path" d="M330 145 L500 145"/>
+  <circle class="chip" cx="540" cy="145" r="18"/><text class="txt small" x="540" y="149" text-anchor="middle">6</text>
+  <circle class="chip" cx="140" cy="220" r="18"/><text class="txt small" x="140" y="224" text-anchor="middle">10</text>
+  <circle class="chip" cx="615" cy="220" r="18"/><text class="txt small" x="615" y="224" text-anchor="middle">10</text>
+  <text class="txt small" x="40" y="292">EVENTS (IN ORDER)</text>
+  <rect class="chip" x="40" y="305" width="90" height="30"/><text class="txt small" x="85" y="325" text-anchor="middle">1 Move</text>
+  <rect class="chip" x="145" y="305" width="105" height="30"/><text class="txt small" x="197" y="325" text-anchor="middle">Attack (D6)</text>
+  <rect class="chip" x="265" y="305" width="120" height="30"/><text class="txt small" x="325" y="325" text-anchor="middle">Shrink (7 -> 5)</text>
+  <rect class="chip" x="400" y="305" width="125" height="30"/><text class="txt small" x="462" y="325" text-anchor="middle">Eliminated (P3)</text>
+</svg>

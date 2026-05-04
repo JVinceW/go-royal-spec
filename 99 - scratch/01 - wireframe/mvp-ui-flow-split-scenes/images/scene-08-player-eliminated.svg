@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="380" viewBox="0 0 800 380">
+  <style>
+    .frame{fill:#444;stroke:#111;stroke-width:3}.grid{fill:#555;stroke:#333}.modal{fill:#666;stroke:#bbb;stroke-width:2}.txt{font-family:Arial,sans-serif;fill:#fff}.label{font-size:18px;font-weight:700;fill:#111}.title{font-size:28px;font-weight:700}.small{font-size:13px}.dark{fill:#2b2b2b;stroke:#ccc}.chip{fill:#555;stroke:#aaa}
+  </style>
+  <text class="label" x="0" y="24">8. PLAYER ELIMINATED</text>
+  <rect class="frame" x="18" y="40" width="760" height="300" rx="14"/>
+  <rect class="grid" x="70" y="80" width="660" height="190"/>
+  <g stroke="#666">
+    <line x1="143" y1="80" x2="143" y2="270"/><line x1="216" y1="80" x2="216" y2="270"/><line x1="289" y1="80" x2="289" y2="270"/><line x1="362" y1="80" x2="362" y2="270"/><line x1="435" y1="80" x2="435" y2="270"/><line x1="508" y1="80" x2="508" y2="270"/><line x1="581" y1="80" x2="581" y2="270"/><line x1="654" y1="80" x2="654" y2="270"/>
+  </g>
+  <text class="txt" x="85" y="103" font-size="15">P1</text><text class="txt" x="695" y="103" font-size="15">P2</text><text class="txt" x="85" y="250" font-size="15">P3 ELIMINATED</text><text class="txt" x="695" y="250" font-size="15">P4</text>
+  <rect class="modal" x="250" y="130" width="300" height="150" rx="8"/>
+  <circle class="dark" cx="400" cy="122" r="35"/><text class="txt" x="400" y="133" font-size="42" text-anchor="middle">X</text>
+  <text class="txt title" x="400" y="185" text-anchor="middle">YOU ARE ELIMINATED</text>
+  <text class="txt small" x="400" y="214" text-anchor="middle">All your units have been defeated.</text>
+  <rect class="dark" x="315" y="235" width="170" height="38" rx="5"/><text class="txt small" x="400" y="259" text-anchor="middle" font-weight="700">CONTINUE WATCHING</text>
+  <rect class="chip" x="280" y="300" width="240" height="34" rx="5"/><text class="txt small" x="400" y="322" text-anchor="middle">P1     P2     P4     REMAIN</text>
+</svg>

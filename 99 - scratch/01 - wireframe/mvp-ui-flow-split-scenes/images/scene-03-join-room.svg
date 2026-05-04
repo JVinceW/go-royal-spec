@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="380" viewBox="0 0 800 380">
+  <style>
+    .frame{fill:#fff;stroke:#111;stroke-width:3}.line{stroke:#111;stroke-width:2;fill:none}.muted{fill:#f4f4f4;stroke:#aaa}.dark{fill:#2b2b2b}.txt{font-family:Arial,sans-serif;fill:#111}.label{font-size:18px;font-weight:700}.btn{font-size:16px;font-weight:700;fill:#fff}.small{font-size:13px}
+  </style>
+  <text class="txt label" x="0" y="24">3. JOIN ROOM</text>
+  <rect class="frame" x="18" y="40" width="760" height="300" rx="18"/>
+  <text class="txt" x="40" y="80" font-size="34">&lt;</text>
+  <text class="txt label" x="95" y="78">JOIN ROOM</text>
+  <text class="txt" x="742" y="80" font-size="24">home</text>
+  <text class="txt label" x="400" y="126" text-anchor="middle">ENTER ROOM CODE</text>
+  <rect class="muted" x="295" y="140" width="250" height="64" rx="5"/>
+  <text class="txt small" x="320" y="178">Enter 4-letter code</text>
+  <rect class="dark" x="295" y="235" width="250" height="46" rx="5"/>
+  <text class="btn" x="420" y="264" text-anchor="middle">JOIN ROOM</text>
+  <rect class="muted" x="295" y="300" width="250" height="34" rx="5"/>
+  <text class="txt small" x="420" y="322" text-anchor="middle">warning  Invalid or full room.</text>
+  <line class="line" x1="18" y1="318" x2="778" y2="318"/>
+  <text class="txt small" x="40" y="334">wifi  Online</text>
+  <text class="txt small" x="155" y="334">v0.1.0 (MVP)</text>
+</svg>

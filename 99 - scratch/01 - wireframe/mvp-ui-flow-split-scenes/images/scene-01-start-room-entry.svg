@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="380" viewBox="0 0 800 380">
+  <style>
+    .frame{fill:#fff;stroke:#111;stroke-width:3}.line{stroke:#111;stroke-width:2;fill:none}.muted{fill:#f4f4f4;stroke:#aaa}.dark{fill:#2b2b2b}.txt{font-family:Arial,sans-serif;fill:#111}.title{font-size:38px;font-weight:700}.label{font-size:18px;font-weight:700}.small{font-size:13px}.btn{font-size:18px;font-weight:700;fill:#fff}.btn2{font-size:18px;font-weight:700;fill:#111}
+  </style>
+  <text class="txt label" x="0" y="24">1. START / ROOM ENTRY</text>
+  <rect class="frame" x="18" y="40" width="760" height="300" rx="18"/>
+  <text class="txt" x="40" y="82" font-size="32">=</text>
+  <text class="txt" x="682" y="80" font-size="24">gear</text>
+  <text class="txt" x="742" y="80" font-size="24">?</text>
+  <text class="txt" x="380" y="118" font-size="42" text-anchor="middle">crown</text>
+  <text class="txt title" x="400" y="160" text-anchor="middle">PROJECT GO-ROYALE</text>
+  <text class="txt" x="400" y="185" font-size="18" text-anchor="middle">4-Player Tactical Battle</text>
+  <rect class="dark" x="260" y="215" width="280" height="46" rx="5"/>
+  <text class="btn" x="400" y="245" text-anchor="middle">CREATE ROOM</text>
+  <rect class="muted" x="260" y="275" width="280" height="46" rx="5"/>
+  <text class="btn2" x="400" y="305" text-anchor="middle">JOIN ROOM</text>
+  <line class="line" x1="18" y1="318" x2="778" y2="318"/>
+  <text class="txt small" x="40" y="334">wifi  Online</text>
+  <text class="txt small" x="130" y="334">|</text>
+  <text class="txt small" x="155" y="334">v0.1.0 (MVP)</text>
+</svg>

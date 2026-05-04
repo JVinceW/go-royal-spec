@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="380" viewBox="0 0 800 380">
+  <style>
+    .frame{fill:#fff;stroke:#111;stroke-width:3}.grid{fill:#fff;stroke:#999}.safe{fill:none;stroke:#777;stroke-dasharray:5 4}.danger{fill:#fff0f0;stroke:#e0aaaa;stroke-dasharray:4 4}.path{stroke:#111;stroke-width:5;fill:none;marker-end:url(#arrow)}.txt{font-family:Arial,sans-serif;fill:#111}.label{font-size:18px;font-weight:700}.small{font-size:12px}.chip{fill:#fafafa;stroke:#aaa}.dark{fill:#2b2b2b}.btn{font-size:13px;font-weight:700;fill:#fff}
+  </style>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#111"/></marker></defs>
+  <text class="txt label" x="0" y="24">6. BATTLE PLANNING</text>
+  <rect class="frame" x="18" y="40" width="760" height="300" rx="14"/>
+  <text class="txt" x="40" y="72" font-size="28">=</text>
+  <rect class="chip" x="210" y="50" width="95" height="22"/><text class="txt small" x="257" y="66" text-anchor="middle">PLANNING</text>
+  <rect class="chip" x="315" y="50" width="45" height="22"/><text class="txt small" x="337" y="66" text-anchor="middle">R4</text>
+  <rect class="chip" x="370" y="50" width="70" height="22"/><text class="txt small" x="405" y="66" text-anchor="middle">7 -> 5</text>
+  <rect class="chip" x="450" y="50" width="65" height="22"/><text class="txt small" x="482" y="66" text-anchor="middle">2 / 4</text>
+  <rect class="chip" x="720" y="50" width="45" height="22"/><text class="txt small" x="742" y="66" text-anchor="middle">LOG</text>
+  <rect class="grid" x="70" y="80" width="660" height="190"/>
+  <g stroke="#ddd">
+    <line x1="143" y1="80" x2="143" y2="270"/><line x1="216" y1="80" x2="216" y2="270"/><line x1="289" y1="80" x2="289" y2="270"/><line x1="362" y1="80" x2="362" y2="270"/><line x1="435" y1="80" x2="435" y2="270"/><line x1="508" y1="80" x2="508" y2="270"/><line x1="581" y1="80" x2="581" y2="270"/><line x1="654" y1="80" x2="654" y2="270"/>
+    <line x1="70" y1="101" x2="730" y2="101"/><line x1="70" y1="122" x2="730" y2="122"/><line x1="70" y1="143" x2="730" y2="143"/><line x1="70" y1="164" x2="730" y2="164"/><line x1="70" y1="185" x2="730" y2="185"/><line x1="70" y1="206" x2="730" y2="206"/><line x1="70" y1="227" x2="730" y2="227"/><line x1="70" y1="248" x2="730" y2="248"/>
+  </g>
+  <rect class="safe" x="170" y="100" width="460" height="150"/><rect class="danger" x="520" y="110" width="120" height="75"/>
+  <text class="txt small" x="85" y="103">P1</text><text class="txt small" x="695" y="103">P2</text><text class="txt small" x="85" y="255">P3</text><text class="txt small" x="695" y="255">P4</text>
+  <circle class="chip" cx="310" cy="145" r="18"/><text class="txt small" x="310" y="149" text-anchor="middle">INF</text>
+  <path class="path" d="M330 145 L455 145"/>
+  <circle class="chip" cx="505" cy="145" r="18"/><text class="txt small" x="505" y="149" text-anchor="middle">ARC</text>
+  <text class="txt small" x="455" y="150">target</text>
+  <circle class="chip" cx="140" cy="220" r="18"/><text class="txt small" x="140" y="224" text-anchor="middle">10</text>
+  <circle class="chip" cx="615" cy="220" r="18"/><text class="txt small" x="615" y="224" text-anchor="middle">10</text>
+  <rect class="chip" x="25" y="285" width="95" height="50"/><text class="txt small" x="72" y="305" text-anchor="middle">INFANTRY</text><text class="txt small" x="72" y="323" text-anchor="middle">HP 8/10</text>
+  <text class="txt label" x="180" y="305">AP</text><text class="txt label" x="180" y="328">3 / 5</text>
+  <text class="txt small" x="275" y="302">PLAN</text>
+  <rect class="chip" x="270" y="310" width="70" height="26"/><text class="txt small" x="305" y="328" text-anchor="middle">1 Move</text>
+  <rect class="chip" x="350" y="310" width="70" height="26"/><text class="txt small" x="385" y="328" text-anchor="middle">2 Move</text>
+  <rect class="chip" x="430" y="310" width="95" height="26"/><text class="txt small" x="477" y="328" text-anchor="middle">Attack (D6)</text>
+  <rect class="chip" x="650" y="305" width="45" height="36"/><text class="txt small" x="672" y="328" text-anchor="middle">CLEAR</text>
+  <rect class="dark" x="705" y="305" width="75" height="36"/><text class="btn" x="742" y="328" text-anchor="middle">CONFIRM</text>
+</svg>

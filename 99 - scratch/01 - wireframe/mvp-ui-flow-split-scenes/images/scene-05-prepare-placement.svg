@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="380" viewBox="0 0 800 380">
+  <style>
+    .frame{fill:#fff;stroke:#111;stroke-width:3}.grid{fill:#fff;stroke:#999}.zone{fill:#ececec;stroke:#777}.your{fill:#e8f1ff;stroke:#777}.dark{fill:#2b2b2b}.txt{font-family:Arial,sans-serif;fill:#111}.label{font-size:18px;font-weight:700}.small{font-size:13px}.btn{font-size:16px;font-weight:700;fill:#fff}.card{fill:#fafafa;stroke:#aaa}
+  </style>
+  <text class="txt label" x="0" y="24">5. PREPARE PLACEMENT</text>
+  <rect class="frame" x="18" y="40" width="760" height="300" rx="14"/>
+  <text class="txt" x="40" y="80" font-size="34">&lt;</text>
+  <text class="txt label" x="706" y="70" text-anchor="middle">1 / 4 READY</text>
+  <rect class="grid" x="90" y="70" width="450" height="250"/>
+  <g stroke="#ddd">
+    <line x1="140" y1="70" x2="140" y2="320"/><line x1="190" y1="70" x2="190" y2="320"/><line x1="240" y1="70" x2="240" y2="320"/><line x1="290" y1="70" x2="290" y2="320"/><line x1="340" y1="70" x2="340" y2="320"/><line x1="390" y1="70" x2="390" y2="320"/><line x1="440" y1="70" x2="440" y2="320"/><line x1="490" y1="70" x2="490" y2="320"/>
+    <line x1="90" y1="98" x2="540" y2="98"/><line x1="90" y1="126" x2="540" y2="126"/><line x1="90" y1="154" x2="540" y2="154"/><line x1="90" y1="182" x2="540" y2="182"/><line x1="90" y1="210" x2="540" y2="210"/><line x1="90" y1="238" x2="540" y2="238"/><line x1="90" y1="266" x2="540" y2="266"/><line x1="90" y1="294" x2="540" y2="294"/>
+  </g>
+  <rect class="your" x="90" y="70" width="90" height="84"/><text class="txt small" x="135" y="94" text-anchor="middle">P1</text><text class="txt small" x="135" y="112" text-anchor="middle">YOUR ZONE</text><text class="txt small" x="110" y="140">INF ARC CAV</text>
+  <rect class="zone" x="450" y="70" width="90" height="84"/><text class="txt small" x="495" y="102" text-anchor="middle">P2 ZONE</text>
+  <rect class="zone" x="90" y="236" width="90" height="84"/><text class="txt small" x="135" y="270" text-anchor="middle">P3 ZONE</text>
+  <rect class="zone" x="450" y="236" width="90" height="84"/><text class="txt small" x="495" y="270" text-anchor="middle">P4 ZONE</text>
+  <text class="txt label" x="650" y="76" text-anchor="middle">YOUR UNITS</text>
+  <rect class="card" x="590" y="95" width="150" height="52" rx="6"/><text class="txt small" x="612" y="125">INF  Infantry</text><text class="txt small" x="720" y="125">x1</text>
+  <rect class="card" x="590" y="160" width="150" height="52" rx="6"/><text class="txt small" x="612" y="190">ARC  Archer</text><text class="txt small" x="720" y="190">x1</text>
+  <rect class="card" x="590" y="225" width="150" height="52" rx="6"/><text class="txt small" x="612" y="255">CAV  Cavalry</text><text class="txt small" x="720" y="255">x1</text>
+  <text class="txt small" x="45" y="346">Place your 3 units in your zone.</text>
+  <rect class="card" x="455" y="328" width="60" height="34" rx="5"/><text class="txt small" x="485" y="350" text-anchor="middle">INF</text>
+  <rect class="card" x="525" y="328" width="60" height="34" rx="5"/><text class="txt small" x="555" y="350" text-anchor="middle">ARC</text>
+  <rect class="card" x="595" y="328" width="60" height="34" rx="5"/><text class="txt small" x="625" y="350" text-anchor="middle">CAV</text>
+  <rect class="dark" x="675" y="328" width="100" height="34" rx="5"/><text class="btn" x="725" y="350" text-anchor="middle">READY</text>
+</svg>
